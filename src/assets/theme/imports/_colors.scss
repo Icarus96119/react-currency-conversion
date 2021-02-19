@@ -1,0 +1,23 @@
+@mixin colors($property) {
+  &-chetwode-blue {
+    #{$property}: $chetwode-blue;
+  }
+  &-tuna {
+    #{$property}: $tuna;
+  }
+  &-silver {
+    #{$property}: $silver;
+  }
+}
+
+.color {
+  @include colors(color);
+}
+
+.bg-color {
+  @include colors(background-color);
+}
+
+.border-color {
+  @include colors(border-color);
+}

@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from 'react';
 
 import { CurrencyInput } from '../../ui-kit/input/currency-input/CurrencyInput';
-
 import { Select } from '../../ui-kit/input/select/Select';
+import { getCurrencyRate } from '../../core/services/currency';
 import { Currency } from '../../core/enums/currency';
 import { currencyToOptions } from '../../core/utils/currency.util';
 import useDebounce from '../../core/hooks/debounce';
 import { environment } from '../../../environment';
-import { getCurrencyRate } from '../../core/services/currency';
 
 export const Converter = () => {
 
@@ -65,8 +64,8 @@ export const Converter = () => {
         <div className="col-12 col-lg-6">
           <div className="d-flex flex-column py-30 px-35 flex-column border-radius-10 bg-info">
             <form>
-              <Select setIsUpdating={ setFromUpdating } options={ currencyOptions } label='Currency' value={ fromCurrency } setValue={ setFromCurrency }></Select>
-              <CurrencyInput setIsUpdating={ setFromUpdating } currency={ fromCurrency } label='Enter Amount' value={ fromAmount } setValue={ setFromAmount }></CurrencyInput>
+              <Select setIsUpdating={setFromUpdating} options={currencyOptions} label='Currency' value={fromCurrency} setValue={setFromCurrency}/>
+              <CurrencyInput setIsUpdating={setFromUpdating} currency={fromCurrency} label='Enter Amount' value={fromAmount} setValue={setFromAmount}/>
             </form>
           </div>
           <div className="mt-15 px-35">
@@ -76,8 +75,8 @@ export const Converter = () => {
         <div className="col-12 col-lg-6">
           <div className="d-flex py-30 px-35 flex-column border-radius-10 bg-info">
             <form>
-              <Select setIsUpdating={ setToUpdating } options={ currencyOptions } label='Currency' value={ toCurrency } setValue={ setToCurrency }></Select>
-              <CurrencyInput setIsUpdating={ setToUpdating } currency={ toCurrency } label='Enter Amount' value={ toAmount } setValue={ setToAmount }></CurrencyInput>
+              <Select setIsUpdating={setToUpdating} options={currencyOptions} label='Currency' value={toCurrency} setValue={setToCurrency}/>
+              <CurrencyInput setIsUpdating={setToUpdating} currency={toCurrency} label='Enter Amount' value={toAmount} setValue={setToAmount}/>
             </form>
           </div>
           <div className="mt-15 px-35">

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { CurrencyRateContext } from './CurrencyRate';
+import { CurrencyRateContext } from './CurrencyRateContext';
 import { CurrencyRate } from '../../models/currency';
 
 export const CurrencyRateProvider = (props: React.PropsWithChildren<{}>) => {

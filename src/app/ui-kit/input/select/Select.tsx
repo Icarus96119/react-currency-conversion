@@ -1,7 +1,7 @@
 import React from 'react';
 import { SelectProps } from '../../../core/props/select';
 
-export const Select: React.FunctionComponent<SelectProps> = ({ label, value, setValue, setIsUpdating, readonly = false, options }) => {
+export const Select: React.FunctionComponent<SelectProps> = ({ label, value, setValue, setIsUpdating, options }) => {
 
   return (
     <div className={`form-group ${label ? 'label-input-group' : ''}`}>

@@ -8,7 +8,7 @@ import './style.scss';
 
 ReactDOM.render(
   <React.Fragment>
-    <App></App>
+    <App/>
   </React.Fragment>,
   document.getElementById('root')
 );

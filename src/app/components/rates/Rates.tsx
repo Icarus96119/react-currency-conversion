@@ -2,13 +2,13 @@ import React from 'react';
 
 import './Rates.scss'
 
-import { CurrencyRateContext } from '../../core/context-provider/currency-rate/CurrencyRate';
+import { CurrencyRateContext } from '../../core/context-provider/currency-rate/CurrencyRateContext';
 
 export const Rates = () => {
   return (
     <CurrencyRateContext.Consumer>
       {
-        ({ rates, setRates }) => {
+        ({ rates }) => {
           return (
             <div className="container py-80">
               <h3 className="text-dark mb-40">US Dollar (USD) Exchange Rates</h3>

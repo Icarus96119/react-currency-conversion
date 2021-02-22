@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { ActionType } from '../../core/enums/action-type';
-import { ActionTypeContext } from '../../core/context-provider/action-status/ActionTypeContext';
+import { ActionTypeContext } from '../../core/context-provider/action-type/ActionTypeContext';
 import { useCurrencyRate } from '../../core/context-provider/currency-rate/CurrencyRateContext';
 import { getAllCurrencyRates } from '../../core/services/currency';
 

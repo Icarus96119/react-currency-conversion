@@ -4,9 +4,9 @@ import { Layout } from './layout/Layout';
 import { Converter } from './components/converter/Converter';
 import { Rates } from './components/rates/Rates';
 
-import { ActionTypeProvider } from './core/context-provider/action-status/ActionTypeProvider';
+import { ActionTypeProvider } from './core/context-provider/action-type/ActionTypeProvider';
 import { CurrencyRateProvider } from './core/context-provider/currency-rate/CurrencyRateProvider';
-import { ActionTypeContext } from './core/context-provider/action-status/ActionTypeContext';
+import { ActionTypeContext } from './core/context-provider/action-type/ActionTypeContext';
 import { ActionType } from './core/enums/action-type';
 
 export const App = () => {
@@ -19,7 +19,7 @@ export const App = () => {
             ({ actionType }) => {
               return (
                 <Layout>
-                  {actionType === ActionType.Converter ? <Converter/> : <Rates/>}
+                  { actionType === ActionType.Converter ? <Converter/> : <Rates/> }
                 </Layout>
               );
             }
